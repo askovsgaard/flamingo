@@ -119,17 +119,30 @@ namespace Topk
 
   IndexQuery::IndexQuery(const Index &idx, const Query &que) 
   {
-    set<uint> grams;
+	set<uint> grams;
     que.sim.gramGen.decompose(que.str, grams);
- 
+int totalSize = 0;
     for (set<uint>::const_iterator gram = grams.begin(); 
          gram != grams.end(); ++gram) {
-      unordered_map<uint, range<uint*> >::const_iterator 
+	unordered_map<uint, range<uint*> >::const_iterator 
         ls = idx.lists.find(*gram);
-      if (ls != idx.lists.end()) {
+
+	std::tr1::unordered_map<uint, range<uint*> >::const_iterator got3 = idx.lists.find(*gram);
+
+	for (unordered_map<uint, range<uint*> >::const_iterator lst = idx.lists.begin();
+       		lst != idx.lists.end(); ++lst) {
+		if (lst->first != *gram) continue;
+		range<uint*> ruint = lst->second;
+		cout << "ID: " << lst->first << " Size: " <<ruint.size() << endl;
+    		totalSize += ruint.size();
+	}
+
+if (ls != idx.lists.end()) {
         lists.push_back(ls->second);
       }
     }
+
+	cout << "Total Size: " << totalSize << " bytes." << endl;
   }
 
   IndexQuery::IndexQuery(const Index &idx, const QueryGroup &queGrp) 
@@ -143,10 +156,11 @@ namespace Topk
 
     for (set<uint>::const_iterator gram = grams.begin(); 
          gram != grams.end(); ++gram) {
-      // cout << *gram << " ";
+       cout << *gram << " here ";
       unordered_map<uint, range<uint*> >::const_iterator 
         ls = idx.lists.find(*gram);
-      if (ls != idx.lists.end())
+
+if (ls != idx.lists.end())
         lists.push_back(ls->second);
     }
 
@@ -157,7 +171,6 @@ namespace Topk
   IndexQuery::IndexQuery(const Index &idx, const QueryGrams &que) 
   {
     OUTPUT("no grams ", que.str.size());
-
     for (vector<uint>::const_iterator gram = que.str.begin(); 
          gram != que.str.end(); ++gram) {
       // cout << *gram << " ";

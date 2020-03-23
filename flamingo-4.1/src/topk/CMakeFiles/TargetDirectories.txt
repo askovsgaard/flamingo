@@ -1,0 +1,15 @@
+/Users/anders/github/flamingo/flamingo-4.1/src/topk/CMakeFiles/rebuild_cache.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/topk/CMakeFiles/edit_cache.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/topk/CMakeFiles/unittest_topk.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/topk/CMakeFiles/perftest_exps_topk.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/topk/CMakeFiles/perftest_util_topk.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/topk/CMakeFiles/example_topk.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/topk/CMakeFiles/perftest_topk.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/topk/CMakeFiles/topk-lib.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/util/CMakeFiles/rebuild_cache.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/util/CMakeFiles/edit_cache.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/util/CMakeFiles/unittest.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/util/CMakeFiles/util-lib.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/common/CMakeFiles/rebuild_cache.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/common/CMakeFiles/edit_cache.dir
+/Users/anders/github/flamingo/flamingo-4.1/src/common/CMakeFiles/common-lib.dir
